@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Дерево</title>
+	<link href="tree.css" rel='stylesheet'/>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="jquery_v_1.7.1.min.js"></script>
+	<!--<script src="http://learn.javascript.ru/files/tutorial/js/tmpl.js"></script>-->
+	<script src="tmpl.js"></script>
+	<!--<script src="http://learn.javascript.ru/files/tutorial/js/class-extend.js"></script>-->
+	<script src="class-extend.js"></script>
+	<script src="templates.js"></script>
+	<script src="dataProvider.js"></script>
+	<script src="tree-mixins.js"></script>
+	<script src="tree.js"></script>
+
+	<script>
+		$(function(){
+			new Tree($('#root'), new SimpleDataProvider(),  new Templates());
+		});
+	</script>
+</head>
+
+<body>
+	<ul id="root" class='treeNode__container' data-nodes-id='root'></ul>
+</body>
+
+<script class='template' data-id='leaf-node' type='text/html' id='leaf-tmpl'>
+	<li class='treeNode  treeNode__leaf'>
+		<i class="treeNode__leafIcon"></i>
+		<label class='treeNode__label'>
+			<input class='treeNode__input' type='checkbox'>
+			<div class='treeNode__content'><%=content%></div>
+		</label>
+	</li>
+</script>
+
+<script class='template' data-id='container-node' type='text/html' id='container-tmpl'>
+	<li class='treeNode treeNode_expand_closed'>
+		<i class='treeNode__expand'></i>
+		<label class='treeNode__label'>
+			<input class='treeNode__input' type='checkbox'>
+			<div class='treeNode__content'><%=content%></div>
+		</label>
+		<ul class='treeNode__container' data-nodes-id="<%=nodesId%>"></ul>
+	</li>
+</script>
+
+<script class='template' data-id='error' type='text/html' id='error-tmpl'>
+	<li class='treeNode treeNode__error'>
+		ошибка загрузки
+	</li>
+</script>
+</html>

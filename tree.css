@@ -1,0 +1,80 @@
+.treeNode{
+	margin: 8px 0;
+	margin-left: 20px;
+	zoom: 1;
+	clear: both;
+}
+
+/* Общий размер 14+2+2 = 18 - такой же как Expand */
+.treeNode__input {
+	width: 14px;
+	height: 14px;
+	float: left;
+	margin: 2px;
+	outline: none;
+}
+
+.treeNode__label{
+	cursor: default;
+}
+
+.treeNode__error{
+	color: red;
+}
+
+.treeNode__root{
+	margin-left: 0;
+}
+
+.treeNode__container{
+	margin: 0;
+	padding: 0;
+}
+
+.treeNode__container li{
+	list-style-type: none;
+}
+
+
+.treeNode__content{
+	/*display: inline-block;*/
+	margin-left: 18px;
+	min-height: 18px
+}
+
+.treeNode__expand, .treeNode__leafIcon {
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+
+.treeNode_expand_opened .treeNode__expand {
+	/*background-image: url(http://www.iconsearch.ru/uploads/icons/fugue/16x16/toggle-collapse.png);*/
+	background-image: url(http://learn.javascript.ru/themes/analytic/images/plusminus.gif);
+	background-position: 0 -42px;
+}
+.treeNode_expand_closed .treeNode__expand {
+	/*background-image: url(http://www.iconsearch.ru/uploads/icons/fugue/16x16/toggle.png);*/
+	background-image: url(http://learn.javascript.ru/themes/analytic/images/plusminus.gif);
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+
+.treeNode__leaf .treeNode__content{
+}
+
+.treeNode__leafIcon{
+	cursor: default;
+	width: 16px;
+	height: 16px;
+	background: url(http://htmlbook.ru/themes/hb/images/bullet.png) no-repeat center 70% ;
+}
+
+.treeNode_expand_opened .treeNode__container{
+	display: block;
+}
+
+.treeNode_expand_closed .treeNode__container{
+	display: none;
+}
