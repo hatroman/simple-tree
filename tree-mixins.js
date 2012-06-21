@@ -14,6 +14,8 @@ var ModifiableMixin = {
 };
 
 var TreeDomHelpersMixin = {
+	name: 'treeNode',
+
 	buildClass: function(elemName) {
 		return '.' + this.name + '__' + elemName;
 	},

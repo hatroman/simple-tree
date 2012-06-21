@@ -5,9 +5,9 @@
  * @requires templates.js
  * @requires dataProvider.js
  */
-var Tree = Class.extend([TreeDomHelpersMixin, ModifiableMixin], {
 
-	name: 'treeNode',
+
+var Tree = Class.extend([TreeDomHelpersMixin, ModifiableMixin], {
 
 	/**
 	 * @param root {jQuery} корневой элемент
@@ -104,3 +104,5 @@ var Tree = Class.extend([TreeDomHelpersMixin, ModifiableMixin], {
 
 	}
 });
+
+

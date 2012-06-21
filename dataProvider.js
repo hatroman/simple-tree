@@ -11,7 +11,6 @@ var SimpleDataProvider = function() {
 	}
 };
 
-
 // это можно докачивать с сервера
 var treeData = {
 	root: [
@@ -21,7 +20,7 @@ var treeData = {
 		{ content: 'Азия' },
 		{ content: 'Африка' },
 		{ content: 'Северная Америка' },
-		{ content: 'Южная Америка' },
+		{ content: 'Южная Америка'},
 		{ content: 'Австралия и Океания', nodesId: 'australia' }
 	],
 	russia: [
